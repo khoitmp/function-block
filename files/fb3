@@ -1,0 +1,5 @@
+var temperature = fb.GetInt("fb1_temperature");
+var speed = fb.GetInt("fb2_speed");
+var total = (temperature + speed) / 2;
+
+Console.WriteLine($"(fb3) Output: (temperature + speed) / 2 = {total}");

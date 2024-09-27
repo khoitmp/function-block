@@ -1,0 +1,4 @@
+Console.WriteLine("(fb2) Input speed");
+
+var speed = 50;
+fb.SetInt("fb2_speed", speed);

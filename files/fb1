@@ -1,0 +1,4 @@
+Console.WriteLine("(fb1) Input temperature");
+
+var temperature = 100;
+fb.SetInt("fb1_temperature", temperature);
