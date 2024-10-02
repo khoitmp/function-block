@@ -1,0 +1,5 @@
+Console.WriteLine("- out2");
+
+var sh = fb.GetInt("sh");
+
+Console.WriteLine($"sh: {sh}");

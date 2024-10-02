@@ -10,14 +10,9 @@ graph LR;
     IN3[Input 3]
     IN4[Input 4]
     IN5[Input 5]
-    IN6[Input 6]
-    IN7[Input 7]
 
     OUT1[Output 1]
     OUT2[Output 2]
-
-    OUT3[Output 3]
-    OUT4[Output 4]
 
     FB1[Function Block 1]
     FB2[Function Block 2]
@@ -29,28 +24,19 @@ graph LR;
     IN3 --> FB2
     IN4 --> FB2
     IN5 --> FB3
-    IN6 --> FB3
-    IN7 --> FB3
 
-    FB1 --> OUT1
-    FB2 --> OUT2
+    FB1 --> FB3
+    FB2 --> FB3
 
-    OUT1 --> IN5
-    OUT2 --> IN6
-
-    FB3 --> OUT3
-    FB3 --> OUT4
+    FB3 --> OUT1
+    FB3 --> OUT2
 
     style IN1 fill:#ADD8E6,color:#000000
     style IN2 fill:#ADD8E6,color:#000000
     style IN3 fill:#ADD8E6,color:#000000
     style IN4 fill:#ADD8E6,color:#000000
     style IN5 fill:#ADD8E6,color:#000000
-    style IN6 fill:#ADD8E6,color:#000000
-    style IN7 fill:#ADD8E6,color:#000000     
 
     style OUT1 fill:#FFFFE0,color:#000000
     style OUT2 fill:#FFFFE0,color:#000000
-    style OUT3 fill:#FFFFE0,color:#000000
-    style OUT4 fill:#FFFFE0,color:#000000   
 ```

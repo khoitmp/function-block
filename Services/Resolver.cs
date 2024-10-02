@@ -5,7 +5,7 @@ namespace FunctionBlock;
 /// </summary>
 internal class Resolver : IResolver
 {
-    public IFunction CreateInstance(string content)
+    public IFunction CreateInstance(string id, string content)
     {
         var language = new Language();
         var compiler = new Compiler(language);
@@ -30,8 +30,10 @@ internal class Resolver : IResolver
                             }}
                         ";
 
-        var assembly = compiler.CompileToAssembly(Guid.NewGuid().ToString(), template);
+        var assembly = compiler.CompileToAssembly(id, template);
         var instance = CreateIntance(assembly);
+
+        instance.SetId(id);
 
         return instance;
     }

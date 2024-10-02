@@ -1,0 +1,5 @@
+Console.WriteLine("- out1");
+
+var vt = fb.GetInt("vt");
+
+Console.WriteLine($"vt: {vt}");

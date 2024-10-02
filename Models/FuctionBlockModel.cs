@@ -1,8 +1,8 @@
 public class FunctionBlockModel
 {
     public string Id { get; set; }
-    public string Content { get; set; }
     public string Path { get; set; }
+    public string Content { get; set; }
 
     public FunctionBlockModel(string id, string path)
     {
@@ -11,7 +11,6 @@ public class FunctionBlockModel
 
         ReadContentAsync().Wait();
     }
-
 
     private async Task ReadContentAsync()
     {

@@ -1,4 +1,7 @@
-Console.WriteLine("(fb1) Input temperature");
+Console.WriteLine("- fb1");
 
-var temperature = 100;
-fb.SetInt("fb1_temperature", temperature);
+var temperature = fb.GetInt("temperature");
+var velocity = fb.GetInt("velocity");
+var vt = (temperature + velocity) / 2;
+
+fb.SetInt("vt", vt);

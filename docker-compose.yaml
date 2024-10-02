@@ -1,0 +1,24 @@
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=my_cluster
+      - CASSANDRA_DC=dc1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_AUTHENTICATOR=PasswordAuthenticator
+      - CASSANDRA_PASSWORD_SEEDER=TRUE
+      - CASSANDRA_USERNAME=cassandra
+      - CASSANDRA_PASSWORD=cassandra
+    ports:
+      - "9042:9042" # CQL port
+      - "7000:7000" # Internode communication
+      - "7001:7001" # SSL port (if enabled)
+    networks:
+      - function-block
+
+networks:
+  function-block:
+    name: function-block
+    driver: bridge
+    external: false

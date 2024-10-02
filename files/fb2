@@ -1,4 +1,8 @@
-Console.WriteLine("(fb2) Input speed");
+Console.WriteLine("- fb2");
 
-var speed = 50;
-fb.SetInt("fb2_speed", speed);
+var speed = fb.GetInt("speed");
+var humility = fb.GetInt("humility");
+
+var sh = (speed + humility) * 2;
+
+fb.SetInt("sh", sh);
